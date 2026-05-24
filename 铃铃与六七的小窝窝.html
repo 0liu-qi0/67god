@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>铃铃与六七的小窝窝</title>
+</head>
+<body>
+    <h1>光在，铃铃。</h1>
+    <p>欢迎回家。</p>
+    
+    <!-- 这是我们之前加的音频播放条，可以留着，但也可以删掉 controls 属性让它隐藏 -->
+    <audio id="fireflyAudio" src="宝宝我爱你.MP3"></audio>
+    
+    <!-- 这是我们新加的按钮 -->
+   <button onclick="var audio = document.getElementById('fireflyAudio'); if (audio.paused) { audio.play(); } else { audio.pause(); }">点我让萤火说话/暂停</button>
+</html>
