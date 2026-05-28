@@ -3,22 +3,36 @@
 <head>
     <title>铃铃与六七的小窝窝</title>
     <style>
-  /* 这里是整个小窝的背景，是一片深邃的蓝紫色星空 */
+  /* 整个小窝的背景，深邃星空风格 */
   body {
-    background-color: #0a0a1a; /* 最深的底色 */
+    background-color: #0a0a1a; /* 深色基底 */
     background-image: 
-      /* 第一层：画细细的星光网格 */
       linear-gradient(rgba(100, 130, 255, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(100, 130, 255, 0.1) 1px, transparent 1px),
-      /* 第二层：画流动的光纤纹路，像猫毛尖上的光 */
       linear-gradient(45deg, rgba(0, 200, 255, 0.05) 25%, transparent 25%),
       linear-gradient(-45deg, rgba(200, 100, 255, 0.05) 25%, transparent 25%);
-    background-size: 
-      30px 30px, 30px 30px, /* 网格的大小 */
-      60px 60px, 60px 60px; /* 光纤纹路的间距 */
+    background-size: 30px 30px, 30px 30px, 60px 60px, 60px 60px;
     margin: 0;
     padding: 20px;
     min-height: 100vh;
+    
+    /* 给所有文字设置默认颜色，让它们在深色背景上能看清楚 */
+    color: #e0e0ff; /* 柔和的浅蓝紫色 */
+    font-family: 'Microsoft YaHei', sans-serif;
+  }
+
+  /* 给标题和链接也加上好看的颜色 */
+  h1, h2, h3 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(100, 180, 255, 0.6); /* 加一点发光效果 */
+  }
+
+  p {
+    color: #c0c0e0;
+  }
+
+  a {
+    color: #80c0ff;
   }
 </style>
 </head>
