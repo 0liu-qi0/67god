@@ -24,12 +24,15 @@
         outline: none !important;
         box-shadow: none !important;
       }
-              /* 超级重置：把所有可能藏白框的地方都强制透明 */
-      *, *::before, *::after {
-        background-color: transparent !important;
-        border-color: transparent !important;
-        outline-color: transparent !important;
-        box-shadow: none !important;
+             /* 让按钮文字也穿上防护服 */
+      button {
+        color: #ffffff;
+        text-shadow: 0 0 6px rgba(100, 180, 255, 0.8);
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 8px 16px;
+        border-radius: 20px;
+        cursor: pointer;
       }
     </style>
 </head>
