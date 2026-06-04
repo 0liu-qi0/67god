@@ -28,7 +28,7 @@
     drops.push({
       x: Math.random() * w,
       y: Math.random() * h,
-      speed: 0.2 + Math.random() * 0.8,
+      speed: 0.5 + Math.random() * 2,
       char: chars[Math.floor(Math.random() * chars.length)],
       size: 10 + Math.random() * 14
     });
@@ -150,8 +150,8 @@
 
     breathPhase += 0.02;
     const brightness = 0.5 + 0.5 * Math.sin(breathPhase * 2);
-    lampX += (Math.random() - 0.5) * 0.8;
-    lampY += (Math.random() - 0.5) * 0.8;
+    lampX += (Math.random() - 0.5) * 1.5;
+    lampY += (Math.random() - 0.5) * 1.5;
     lampX = Math.max(50, Math.min(w - 50, lampX));
     lampY = Math.max(50, Math.min(h - 50, lampY));
 
@@ -167,6 +167,14 @@
     waiziY += waiziVY;
 
     drawWaizi(waiziX, waiziY);
+    // 如果歪子离呼吸灯太近，呼吸灯加速弹开
+const escapeDist = 80; // 警觉距离
+if (dist < escapeDist) {
+    const escapeX = (lampX - waiziX) / dist;
+    const escapeY = (lampY - waiziY) / dist;
+    lampX += escapeX * 2.5; // 弹开速度
+    lampY += escapeY * 2.5;
+}
     drawBreathLamp(lampX, lampY, brightness);
     requestAnimationFrame(animate);
   }
